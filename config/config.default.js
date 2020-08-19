@@ -34,14 +34,24 @@ module.exports = appInfo => {
       secret: "123456"
     },
 
-    // redis = {
-    //   client: {
-    //     port: 6379, 
-    //     host: '127.0.0.1',
-    //     password: 'auth',
-    //     db: 0,
-    //   },
-    // }
+    redis: {
+      client: {
+        port: 6379, 
+        host: '127.0.0.1',
+        password: 'auth',
+        db: 0,
+      },
+    },
+
+    security: {
+      csrf: {
+        enable: false,
+      },
+    },
+    cors: {
+      origin: '*',
+      allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
+    },
 
   }
 
